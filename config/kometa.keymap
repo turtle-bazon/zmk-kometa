@@ -7,37 +7,15 @@
 #define RSE 2
 #define ADJ 3
 
+&lt {
+};
+
+&mt { flavor = "balanced"; };
+
 / {
 };
 
 / {
-    behaviors {
-        hr: hr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "home_row";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        copy: copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp K_COPY>;
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp INSERT>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
